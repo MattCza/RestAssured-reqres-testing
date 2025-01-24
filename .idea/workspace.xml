@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad024eb1-fb2f-4a89-8ddd-f4e8fb98dfa0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/RestTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/reqres/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/reqres/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RestTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +38,12 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.RestTest.g3tSmth.executor": "Run",
+    "TestNG.RestTest.getRequestIs3rdUsersID9andNameTobias.executor": "Run",
+    "TestNG.RestTest.getRequestIsUserWithID2.executor": "Run",
+    "TestNG.RestTest.getRequestUserNotFound.executor": "Run",
+    "TestNG.RestTest.getStatusCode200.executor": "Run",
+    "TestNG.RestTest.postRequest.executor": "Run",
     "TestNG.RestTest.testRestAssured.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -48,12 +52,60 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="RestTest.testRestAssured" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.RestTest.postRequest">
+    <configuration name="RestTest.getRequestIs3rdUsersID9andNameTobias" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured-reqres-testing" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="RestTest" />
-      <option name="METHOD_NAME" value="testRestAssured" />
+      <option name="METHOD_NAME" value="getRequestIs3rdUsersID9andNameTobias" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestTest.getRequestIsUserWithID2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured-reqres-testing" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RestTest" />
+      <option name="METHOD_NAME" value="getRequestIsUserWithID2" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestTest.getRequestUserNotFound" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured-reqres-testing" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RestTest" />
+      <option name="METHOD_NAME" value="getRequestUserNotFound" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestTest.getStatusCode200" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured-reqres-testing" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RestTest" />
+      <option name="METHOD_NAME" value="getStatusCode200" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestTest.postRequest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured-reqres-testing" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RestTest" />
+      <option name="METHOD_NAME" value="postRequest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -63,7 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RestTest.testRestAssured" />
+        <item itemvalue="TestNG.RestTest.postRequest" />
+        <item itemvalue="TestNG.RestTest.getRequestIs3rdUsersID9andNameTobias" />
+        <item itemvalue="TestNG.RestTest.getRequestUserNotFound" />
+        <item itemvalue="TestNG.RestTest.getRequestIsUserWithID2" />
+        <item itemvalue="TestNG.RestTest.getStatusCode200" />
       </list>
     </recent_temporary>
   </component>
