@@ -7,8 +7,9 @@ import io.restassured.response.Response;
 import org.json.simple.JSONObject;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import java.util.List;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+
 
 public class RestAssuredTests extends BaseTest {
 
@@ -102,6 +103,14 @@ public class RestAssuredTests extends BaseTest {
 
         int incrementedId = Integer.parseInt(lastUserID) - 1;
         lastUserID = String.valueOf(incrementedId);
+    }
+
+    @Test
+    public void validateUserSchema() {
+        get("/users/1")
+                .then()
+                .assertThat()
+                .body(matchesJsonSchemaInClasspath("schemas/user-schema.json"));
     }
 
 

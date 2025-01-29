@@ -1,10 +1,5 @@
-import io.restassured.response.Response;
 import org.testng.annotations.BeforeClass;
-
-import java.util.List;
-
 import static io.restassured.RestAssured.baseURI;
-import static io.restassured.RestAssured.get;
 
 public class BaseTest {
     protected String REQRES_URL = "https://reqres.in/api";
@@ -12,7 +7,7 @@ public class BaseTest {
 
 
     @BeforeClass
-    public void setUp(){
+    public void setUp() {
         baseURI = LOCAL_URL;
     }
 
