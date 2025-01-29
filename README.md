@@ -10,9 +10,10 @@
    - [🔍 Fetching User Data](#-fetching-user-data)  
    - [➕ Adding a New User](#-adding-a-new-user)  
    - [🗑 Deleting a User](#-deleting-a-user)  
-5. [📌 Example Request & Response](#-example-request--response)  
-6. [🚀 Next Steps](#-next-steps)  
-7. [⚙️ Running the Local API Server](#️-running-the-local-api-server)  
+5. [🔍 JSON Schema Validation](#-json-schema-validation) 
+6. [📌 Example Request](#-example-request)  
+7. [🚀 Next Steps](#-next-steps)  
+8. [⚙️ Running the Local API Server](#️-running-the-local-api-server)  
 
 ---
 
@@ -28,7 +29,8 @@ The purpose of this module is to test API endpoints using **Rest Assured** to va
 - **TestNG** – for test execution  
 - **JSON Simple** – for request body creation  
 - **Hamcrest Matchers** – for response validation  
-- **JSON Server** – for running a mock API locally  
+- **JSON Server** – for running a mock API locally
+- **JSON Schema Validator** – for validating API responses  
 
 ---
 
@@ -61,7 +63,37 @@ The purpose of this module is to test API endpoints using **Rest Assured** to va
 ✔️ Updates `lastUserID` to ensure test consistency.  
 
 ---
+## 🔍 JSON Schema Validation
+To ensure API responses follow the expected format, JSON Schema validation is implemented using matchesJsonSchemaInClasspath().  
+```
+   @Test
+   public void validateUserSchema() {
+    get("/users/1")
+        .then()
+        .assertThat()
+        .body(matchesJsonSchemaInClasspath("schemas/user-schema.json"));
+}
+```
+The schema file (user-schema.json) should be located in src/test/resources/schemas/.   
+Content of the user-schema.json file:  
+```
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "firstName": { "type": "string" },
+    "lastName": { "type": "string" },
+    "age": { "type": "integer" },
+    "departmentId": { "type": "string" }
+  },
+  "required": ["id", "firstName", "lastName", "age", "departmentId"]
+}
 
+```
+
+
+---
 ## 📌 Example Request
 ### **POST /users – Adding a New User**  
 
@@ -80,9 +112,8 @@ The purpose of this module is to test API endpoints using **Rest Assured** to va
 ✅ Expand test coverage with more complex assertions.  
 ✅ Implement parameterized tests for dynamic data validation.  
 ✅ Integrate tests with CI/CD pipelines to automate execution.  
-✅ Add PUT requests to update user data and validate responses.  
-🔄 Implement JSON Schema Validation for request/response verification.  
-🌍 Extend tests to run in multiple environments (local, staging, production).  
+🔄 Add PUT requests to update user data and validate responses.  
+🛠 Extend JSON Schema & XML validation for more structured testing.  
 
 
 ## ⚙️ Running the Local API Server  
