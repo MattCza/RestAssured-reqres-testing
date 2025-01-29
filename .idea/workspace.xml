@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad024eb1-fb2f-4a89-8ddd-f4e8fb98dfa0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RestAssuredTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +24,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2s4PhpCxuhjuAB8nFjaVuLJpZsk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -38,6 +37,14 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.RestAssuredTests.deleteUserById.executor": "Run",
+    "TestNG.RestAssuredTests.getIs2ndUserIMark.executor": "Run",
+    "TestNG.RestAssuredTests.getIs2ndUserNotMark.executor": "Run",
+    "TestNG.RestAssuredTests.getIsStatusCode200.executor": "Run",
+    "TestNG.RestAssuredTests.getRequest.executor": "Run",
+    "TestNG.RestAssuredTests.getRequestIsStatusCode200.executor": "Run",
+    "TestNG.RestAssuredTests.getUserNotFound.executor": "Run",
+    "TestNG.RestAssuredTests.postAddNewUser.executor": "Run",
     "TestNG.RestTest.g3tSmth.executor": "Run",
     "TestNG.RestTest.getRequestIs3rdUsersID9andNameTobias.executor": "Run",
     "TestNG.RestTest.getRequestIsUserWithID2.executor": "Run",
@@ -47,17 +54,18 @@
     "TestNG.RestTest.testRestAssured.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/m.czajkowsk2/Desktop/Projects/RestAssured/RestAssured-reqres-testing",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.RestTest.postRequest">
-    <configuration name="RestTest.getRequestIs3rdUsersID9andNameTobias" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.RestAssuredTests.deleteUserById">
+    <configuration name="RestAssuredTests.deleteUserById" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured-reqres-testing" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RestTest" />
-      <option name="METHOD_NAME" value="getRequestIs3rdUsersID9andNameTobias" />
+      <option name="MAIN_CLASS_NAME" value="RestAssuredTests" />
+      <option name="METHOD_NAME" value="deleteUserById" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -65,11 +73,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestTest.getRequestIsUserWithID2" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RestAssuredTests.getIs2ndUserNotMark" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured-reqres-testing" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RestTest" />
-      <option name="METHOD_NAME" value="getRequestIsUserWithID2" />
+      <option name="MAIN_CLASS_NAME" value="RestAssuredTests" />
+      <option name="METHOD_NAME" value="getIs2ndUserNotMark" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -77,11 +85,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestTest.getRequestUserNotFound" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RestAssuredTests.getIsStatusCode200" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured-reqres-testing" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RestTest" />
-      <option name="METHOD_NAME" value="getRequestUserNotFound" />
+      <option name="MAIN_CLASS_NAME" value="RestAssuredTests" />
+      <option name="METHOD_NAME" value="getIsStatusCode200" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -89,11 +97,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestTest.getStatusCode200" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RestAssuredTests.getUserNotFound" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured-reqres-testing" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RestTest" />
-      <option name="METHOD_NAME" value="getStatusCode200" />
+      <option name="MAIN_CLASS_NAME" value="RestAssuredTests" />
+      <option name="METHOD_NAME" value="getUserNotFound" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -101,11 +109,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestTest.postRequest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RestAssuredTests.postAddNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured-reqres-testing" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RestTest" />
-      <option name="METHOD_NAME" value="postRequest" />
+      <option name="MAIN_CLASS_NAME" value="RestAssuredTests" />
+      <option name="METHOD_NAME" value="postAddNewUser" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -115,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RestTest.postRequest" />
-        <item itemvalue="TestNG.RestTest.getRequestIs3rdUsersID9andNameTobias" />
-        <item itemvalue="TestNG.RestTest.getRequestUserNotFound" />
-        <item itemvalue="TestNG.RestTest.getRequestIsUserWithID2" />
-        <item itemvalue="TestNG.RestTest.getStatusCode200" />
+        <item itemvalue="TestNG.RestAssuredTests.deleteUserById" />
+        <item itemvalue="TestNG.RestAssuredTests.postAddNewUser" />
+        <item itemvalue="TestNG.RestAssuredTests.getIsStatusCode200" />
+        <item itemvalue="TestNG.RestAssuredTests.getIs2ndUserNotMark" />
+        <item itemvalue="TestNG.RestAssuredTests.getUserNotFound" />
       </list>
     </recent_temporary>
   </component>
