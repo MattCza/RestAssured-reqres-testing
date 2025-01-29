@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad024eb1-fb2f-4a89-8ddd-f4e8fb98dfa0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/PostmanCloudTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RestAssuredTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RestAssuredTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RestAssuredTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SelfHostedApiTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -33,47 +38,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;TestNG.RestAssuredTests.deleteUserById.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RestAssuredTests.getIs2ndUserIMark.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RestAssuredTests.getIs2ndUserNotMark.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RestAssuredTests.getIsStatusCode200.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RestAssuredTests.getRequest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RestAssuredTests.getRequestIsStatusCode200.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RestAssuredTests.getUserNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RestAssuredTests.postAddNewUser.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RestAssuredTests.validateUserSchema.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RestTest.g3tSmth.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RestTest.getRequestIs3rdUsersID9andNameTobias.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RestTest.getRequestIsUserWithID2.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RestTest.getRequestUserNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RestTest.getStatusCode200.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RestTest.postRequest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RestTest.testRestAssured.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/m.czajkowsk2/Desktop/Projects/RestAssured/RestAssured-reqres-testing&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.PostmanCloudTests.executor": "Run",
+    "TestNG.PostmanCloudTests.postLoginWithCorrectCredentials.executor": "Run",
+    "TestNG.RestAssuredTests.deleteUserById.executor": "Run",
+    "TestNG.RestAssuredTests.executor": "Run",
+    "TestNG.RestAssuredTests.getIs2ndUserIMark.executor": "Run",
+    "TestNG.RestAssuredTests.getIs2ndUserNotMark.executor": "Run",
+    "TestNG.RestAssuredTests.getIsStatusCode200.executor": "Run",
+    "TestNG.RestAssuredTests.getRequest.executor": "Run",
+    "TestNG.RestAssuredTests.getRequestIsStatusCode200.executor": "Run",
+    "TestNG.RestAssuredTests.getUserNotFound.executor": "Run",
+    "TestNG.RestAssuredTests.postAddNewUser.executor": "Run",
+    "TestNG.RestAssuredTests.postLoginWithCorrectCredentials.executor": "Run",
+    "TestNG.RestAssuredTests.postLoginWithDigestCorrectCredentials.executor": "Run",
+    "TestNG.RestAssuredTests.postLoginWithWrongCredentials.executor": "Run",
+    "TestNG.RestAssuredTests.validateUserSchema.executor": "Run",
+    "TestNG.RestTest.g3tSmth.executor": "Run",
+    "TestNG.RestTest.getRequestIs3rdUsersID9andNameTobias.executor": "Run",
+    "TestNG.RestTest.getRequestIsUserWithID2.executor": "Run",
+    "TestNG.RestTest.getRequestUserNotFound.executor": "Run",
+    "TestNG.RestTest.getStatusCode200.executor": "Run",
+    "TestNG.RestTest.postRequest.executor": "Run",
+    "TestNG.RestTest.testRestAssured.executor": "Run",
+    "TestNG.SelfHostedApiTests.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/m.czajkowsk2/Desktop/Projects/RestAssured/RestAssured-reqres-testing",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\m.czajkowsk2\Desktop\Projects\RestAssured\RestAssured-reqres-testing\src\test\resources\schemas" />
       <recent name="C:\Users\m.czajkowsk2\Desktop\Projects\RestAssured\RestAssured-reqres-testing\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RestAssuredTests.validateUserSchema">
-    <configuration name="RestAssuredTests.deleteUserById" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.PostmanCloudTests.postLoginWithCorrectCredentials">
+    <configuration name="PostmanCloudTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured-reqres-testing" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RestAssuredTests" />
-      <option name="METHOD_NAME" value="deleteUserById" />
+      <option name="MAIN_CLASS_NAME" value="PostmanCloudTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostmanCloudTests.postLoginWithCorrectCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured-reqres-testing" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PostmanCloudTests" />
+      <option name="METHOD_NAME" value="postLoginWithCorrectCredentials" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -81,11 +104,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestAssuredTests.getIs2ndUserNotMark" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SelfHostedApiTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured-reqres-testing" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RestAssuredTests" />
-      <option name="METHOD_NAME" value="getIs2ndUserNotMark" />
+      <option name="MAIN_CLASS_NAME" value="SelfHostedApiTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SelfHostedApiTests.postLoginWithDigestCorrectCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured-reqres-testing" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SelfHostedApiTests" />
+      <option name="METHOD_NAME" value="postLoginWithDigestCorrectCredentials" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -93,35 +127,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestAssuredTests.getIsStatusCode200" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SelfHostedApiTests.postLoginWithWrongCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured-reqres-testing" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RestAssuredTests" />
-      <option name="METHOD_NAME" value="getIsStatusCode200" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RestAssuredTests.postAddNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestAssured-reqres-testing" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RestAssuredTests" />
-      <option name="METHOD_NAME" value="postAddNewUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RestAssuredTests.validateUserSchema" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestAssured-reqres-testing" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RestAssuredTests" />
-      <option name="METHOD_NAME" value="validateUserSchema" />
+      <option name="MAIN_CLASS_NAME" value="SelfHostedApiTests" />
+      <option name="METHOD_NAME" value="postLoginWithWrongCredentials" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -131,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RestAssuredTests.validateUserSchema" />
-        <item itemvalue="TestNG.RestAssuredTests.deleteUserById" />
-        <item itemvalue="TestNG.RestAssuredTests.postAddNewUser" />
-        <item itemvalue="TestNG.RestAssuredTests.getIsStatusCode200" />
-        <item itemvalue="TestNG.RestAssuredTests.getIs2ndUserNotMark" />
+        <item itemvalue="TestNG.PostmanCloudTests.postLoginWithCorrectCredentials" />
+        <item itemvalue="TestNG.PostmanCloudTests" />
+        <item itemvalue="TestNG.SelfHostedApiTests" />
+        <item itemvalue="TestNG.SelfHostedApiTests.postLoginWithDigestCorrectCredentials" />
+        <item itemvalue="TestNG.SelfHostedApiTests.postLoginWithWrongCredentials" />
       </list>
     </recent_temporary>
   </component>

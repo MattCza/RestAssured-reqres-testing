@@ -1,7 +1,6 @@
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.simple.JSONObject;
@@ -11,7 +10,7 @@ import java.util.List;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 
-public class RestAssuredTests extends BaseTest {
+public class SelfHostedApiTests {
 
     private String apiUsersPath = "/users";
     private String apiDepartmentsPath = "/departments";
@@ -20,21 +19,23 @@ public class RestAssuredTests extends BaseTest {
     private int departmentManager = 3;
     private String lastUserID;
 
-    @BeforeClass
+    @BeforeClass()
+    public void setUp() {
+        baseURI = "http://localhost:3000";
+    }
+
+    @BeforeClass(dependsOnMethods = "setUp")
     public void fetchLastUserId() {
         System.out.println("Fetching the last user ID before running tests...");
 
-        // Send GET request to fetch all users
-        Response response = RestAssured.get(apiUsersPath);
-
-        // Extract list of user IDs
+        Response response = io.restassured.RestAssured.get(apiUsersPath);
         List<String> userIds = response.jsonPath().getList("id");
 
         if (!userIds.isEmpty()) {
             lastUserID = userIds.getLast(); // Get last element
-            System.out.println("✅ Last User ID retrieved: " + lastUserID);
+            System.out.println("Last User ID: " + lastUserID);
         } else {
-            throw new RuntimeException("❌ No users found in the API response.");
+            throw new RuntimeException("No users found in the API response.");
         }
     }
 
@@ -112,6 +113,8 @@ public class RestAssuredTests extends BaseTest {
                 .assertThat()
                 .body(matchesJsonSchemaInClasspath("schemas/user-schema.json"));
     }
+
+
 
 
 }
