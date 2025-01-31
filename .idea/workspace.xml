@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad024eb1-fb2f-4a89-8ddd-f4e8fb98dfa0" name="Changes" comment="" />
+    <list default="true" id="ad024eb1-fb2f-4a89-8ddd-f4e8fb98dfa0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,13 +60,15 @@
     "TestNG.RestTest.getStatusCode200.executor": "Run",
     "TestNG.RestTest.postRequest.executor": "Run",
     "TestNG.RestTest.testRestAssured.executor": "Run",
+    "TestNG.Run testNG.executor": "Run",
     "TestNG.SelfHostedApiTests.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/m.czajkowsk2/Desktop/Projects/RestAssured/RestAssured-reqres-testing",
+    "last_opened_file_path": "C:/Users/m.czajkowsk2/Desktop/Projects/RestAssured/RestAssured-reqres-testing/reports",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -73,12 +77,22 @@
       <recent name="C:\Users\m.czajkowsk2\Desktop\Projects\RestAssured\RestAssured-reqres-testing\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PostmanCloudTests.postLoginWithCorrectCredentials">
+  <component name="RunManager" selected="TestNG.Run testNG">
     <configuration name="PostmanCloudTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured-reqres-testing" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PostmanCloudTests" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="C:\Users\m.czajkowsk2\Desktop\Projects\RestAssured\RestAssured-reqres-testing\reports" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -87,10 +101,42 @@
     </configuration>
     <configuration name="PostmanCloudTests.postLoginWithCorrectCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured-reqres-testing" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PostmanCloudTests" />
       <option name="METHOD_NAME" value="postLoginWithCorrectCredentials" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="C:\Users\m.czajkowsk2\Desktop\Projects\RestAssured\RestAssured-reqres-testing\reports" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Run testNG" type="TestNG">
+      <module name="RestAssured-reqres-testing" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PostmanCloudTests" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="true" />
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -99,9 +145,19 @@
     </configuration>
     <configuration name="SelfHostedApiTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured-reqres-testing" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SelfHostedApiTests" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="C:\Users\m.czajkowsk2\Desktop\Projects\RestAssured\RestAssured-reqres-testing\reports" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -110,10 +166,20 @@
     </configuration>
     <configuration name="SelfHostedApiTests.postLoginWithDigestCorrectCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured-reqres-testing" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SelfHostedApiTests" />
       <option name="METHOD_NAME" value="postLoginWithDigestCorrectCredentials" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="C:\Users\m.czajkowsk2\Desktop\Projects\RestAssured\RestAssured-reqres-testing\reports" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -122,20 +188,38 @@
     </configuration>
     <configuration name="SelfHostedApiTests.postLoginWithWrongCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured-reqres-testing" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SelfHostedApiTests" />
       <option name="METHOD_NAME" value="postLoginWithWrongCredentials" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="C:\Users\m.czajkowsk2\Desktop\Projects\RestAssured\RestAssured-reqres-testing\reports" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="TestNG.Run testNG" />
+      <item itemvalue="TestNG.PostmanCloudTests" />
+      <item itemvalue="TestNG.PostmanCloudTests.postLoginWithCorrectCredentials" />
+      <item itemvalue="TestNG.SelfHostedApiTests" />
+      <item itemvalue="TestNG.SelfHostedApiTests.postLoginWithDigestCorrectCredentials" />
+      <item itemvalue="TestNG.SelfHostedApiTests.postLoginWithWrongCredentials" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.PostmanCloudTests.postLoginWithCorrectCredentials" />
         <item itemvalue="TestNG.PostmanCloudTests" />
+        <item itemvalue="TestNG.PostmanCloudTests.postLoginWithCorrectCredentials" />
         <item itemvalue="TestNG.SelfHostedApiTests" />
         <item itemvalue="TestNG.SelfHostedApiTests.postLoginWithDigestCorrectCredentials" />
         <item itemvalue="TestNG.SelfHostedApiTests.postLoginWithWrongCredentials" />
