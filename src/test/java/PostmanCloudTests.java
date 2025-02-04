@@ -41,5 +41,15 @@ public class PostmanCloudTests {
                 .statusCode(200).log().status();
     }
 
+    @Test(priority = 3)
+    public void postLoginWithDigestWrongCredentials() {
+        given()
+                .auth().digest("postman", "password2")
+                .when()
+                .get("/basic-auth")
+                .then()
+                .statusCode(401).log().body();
+    }
+
 
 }
