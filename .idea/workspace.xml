@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad024eb1-fb2f-4a89-8ddd-f4e8fb98dfa0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/utility/ExcelUtility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PostmanCloudTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PostmanCloudTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SelfHostedApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SelfHostedApiTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +39,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.Utility.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.PostmanCloudTests.executor": "Run",
@@ -64,7 +67,11 @@
     "TestNG.RestTest.postRequest.executor": "Run",
     "TestNG.RestTest.testRestAssured.executor": "Run",
     "TestNG.Run testNG.executor": "Run",
+    "TestNG.SelfHostedApiTests.deleteUserByLastID.executor": "Run",
+    "TestNG.SelfHostedApiTests.deleteUserImportedFromExcelFile.executor": "Run",
     "TestNG.SelfHostedApiTests.executor": "Run",
+    "TestNG.SelfHostedApiTests.postAddNewUser.executor": "Run",
+    "TestNG.SelfHostedApiTests.postUsersFromExcelFile.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/m.czajkowsk2/Desktop/Projects/RestAssured/RestAssured-reqres-testing/reports",
@@ -80,74 +87,7 @@
       <recent name="C:\Users\m.czajkowsk2\Desktop\Projects\RestAssured\RestAssured-reqres-testing\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PostmanCloudTests.postLoginWithDigestWrongCredentials">
-    <configuration name="PostmanCloudTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestAssured-reqres-testing" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PostmanCloudTests" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="C:\Users\m.czajkowsk2\Desktop\Projects\RestAssured\RestAssured-reqres-testing\reports" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PostmanCloudTests.getCookies" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestAssured-reqres-testing" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PostmanCloudTests" />
-      <option name="METHOD_NAME" value="getCookies" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PostmanCloudTests.postLoginWithCorrectCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestAssured-reqres-testing" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PostmanCloudTests" />
-      <option name="METHOD_NAME" value="postLoginWithCorrectCredentials" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="C:\Users\m.czajkowsk2\Desktop\Projects\RestAssured\RestAssured-reqres-testing\reports" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PostmanCloudTests.postLoginWithDigestWrongCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestAssured-reqres-testing" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PostmanCloudTests" />
-      <option name="METHOD_NAME" value="postLoginWithDigestWrongCredentials" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.SelfHostedApiTests">
     <configuration name="Run testNG" type="TestNG">
       <module name="RestAssured-reqres-testing" />
       <shortenClasspath name="NONE" />
@@ -172,19 +112,57 @@
     </configuration>
     <configuration name="SelfHostedApiTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured-reqres-testing" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SelfHostedApiTests" />
-      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="C:\Users\m.czajkowsk2\Desktop\Projects\RestAssured\RestAssured-reqres-testing\reports" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SelfHostedApiTests.deleteUserByLastID" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured-reqres-testing" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SelfHostedApiTests" />
+      <option name="METHOD_NAME" value="deleteUserByLastID" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SelfHostedApiTests.deleteUserImportedFromExcelFile" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured-reqres-testing" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SelfHostedApiTests" />
+      <option name="METHOD_NAME" value="deleteUserImportedFromExcelFile" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SelfHostedApiTests.postAddNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured-reqres-testing" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SelfHostedApiTests" />
+      <option name="METHOD_NAME" value="postAddNewUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SelfHostedApiTests.postUsersFromExcelFile" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured-reqres-testing" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SelfHostedApiTests" />
+      <option name="METHOD_NAME" value="postUsersFromExcelFile" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -193,19 +171,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.Run testNG" />
-      <item itemvalue="TestNG.PostmanCloudTests.getCookies" />
-      <item itemvalue="TestNG.PostmanCloudTests.postLoginWithDigestWrongCredentials" />
-      <item itemvalue="TestNG.PostmanCloudTests" />
-      <item itemvalue="TestNG.PostmanCloudTests.postLoginWithCorrectCredentials" />
+      <item itemvalue="TestNG.SelfHostedApiTests.deleteUserByLastID" />
+      <item itemvalue="TestNG.SelfHostedApiTests.deleteUserImportedFromExcelFile" />
+      <item itemvalue="TestNG.SelfHostedApiTests.postAddNewUser" />
+      <item itemvalue="TestNG.SelfHostedApiTests.postUsersFromExcelFile" />
       <item itemvalue="TestNG.SelfHostedApiTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.PostmanCloudTests.postLoginWithDigestWrongCredentials" />
-        <item itemvalue="TestNG.PostmanCloudTests.getCookies" />
-        <item itemvalue="TestNG.PostmanCloudTests" />
-        <item itemvalue="TestNG.PostmanCloudTests.postLoginWithCorrectCredentials" />
         <item itemvalue="TestNG.SelfHostedApiTests" />
+        <item itemvalue="TestNG.SelfHostedApiTests.postAddNewUser" />
+        <item itemvalue="TestNG.SelfHostedApiTests.deleteUserByLastID" />
+        <item itemvalue="TestNG.SelfHostedApiTests.deleteUserImportedFromExcelFile" />
+        <item itemvalue="TestNG.SelfHostedApiTests.postUsersFromExcelFile" />
       </list>
     </recent_temporary>
   </component>
@@ -219,5 +197,16 @@
       <updated>1737711996679</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

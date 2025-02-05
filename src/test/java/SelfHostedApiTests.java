@@ -6,7 +6,10 @@ import io.restassured.response.Response;
 import org.json.simple.JSONObject;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import utility.ExcelUtility;
+
 import java.util.List;
+
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 
@@ -14,10 +17,12 @@ public class SelfHostedApiTests {
 
     private String apiUsersPath = "/users";
     private String apiDepartmentsPath = "/departments";
-    private int departmentTesting = 1;
-    private int departmentDev = 2;
-    private int departmentManager = 3;
+    private String departmentTesting = "1";
+    private String departmentDev = "2";
+    private String departmentManager = "3";
     private String lastUserID;
+    String excelFilePath = "src/test/resources/data/data.xlsx";
+    String excelSheetName = "Sheet1";
 
     @BeforeClass()
     public void setUp() {
@@ -39,7 +44,7 @@ public class SelfHostedApiTests {
         }
     }
 
-    @Test
+    @Test(priority = 0)
     public void getIsStatusCode200() {
         get()
                 .then()
@@ -47,13 +52,13 @@ public class SelfHostedApiTests {
                 .log().status();
     }
 
-    @Test
+    @Test(priority = 1)
     public void getAllUsers() {
         get(apiUsersPath)
                 .then().log().body();
     }
 
-    @Test
+    @Test(priority = 2)
     public void getIs2ndUserNotMark() {
         get(apiUsersPath + "/2")
                 .then()
@@ -61,7 +66,7 @@ public class SelfHostedApiTests {
                 .log().body();
     }
 
-    @Test
+    @Test(priority = 3)
     public void getUserNotFound() {
         get(apiUsersPath + "/2112")
                 .then()
@@ -69,7 +74,7 @@ public class SelfHostedApiTests {
                 .log().status();
     }
 
-    @Test
+    @Test(priority = 4)
     public void postAddNewUser() {
         JSONObject request = new JSONObject();
 
@@ -92,7 +97,7 @@ public class SelfHostedApiTests {
                 .statusCode(201).log().body();
     }
 
-    @Test
+    @Test(priority = 5)
     public void deleteUserByLastID() {
         given().header("Content-Type", "application/json")
                 .contentType(ContentType.JSON)
@@ -106,7 +111,7 @@ public class SelfHostedApiTests {
         lastUserID = String.valueOf(incrementedId);
     }
 
-    @Test
+    @Test(priority = 6)
     public void validateUserSchema() {
         get("/users/1")
                 .then()
@@ -115,6 +120,54 @@ public class SelfHostedApiTests {
     }
 
 
+    @Test(priority = 6)
+    public void postUsersFromExcelFile() {
+
+        ExcelUtility excelUtility = new ExcelUtility(excelFilePath, excelSheetName);
+        int rowCount = excelUtility.getRowCount();
+        JSONObject request = new JSONObject();
+
+        for (int i = 1; i < rowCount; i++) {
+            int incrementedId = Integer.parseInt(lastUserID) + 1;
+            lastUserID = String.valueOf(incrementedId);
+
+            for (int j = 0; j <= 3; j++) {
+                request.put("id", lastUserID);
+                request.put("firstName", excelUtility.getCellData(i, 0));
+                request.put("lastName", excelUtility.getCellData(i, 1));
+                request.put("age", excelUtility.getCellData(i, 2));
+                request.put("departmentId", excelUtility.getCellData(i, 3));
+            }
+
+            given().header("Content-Type", "application/json")
+                    .contentType(ContentType.JSON)
+                    .accept(ContentType.JSON)
+                    .body(request.toJSONString())
+                    .when()
+                    .post(apiUsersPath)
+                    .then()
+                    .statusCode(201).log().body();
+        }
+    }
+
+    @Test(priority = 7)
+    public void deleteUserImportedFromExcelFile() {
+        ExcelUtility excelUtility = new ExcelUtility(excelFilePath, excelSheetName);
+        int rowCount = excelUtility.getRowCount();
+
+        for (int i = 1; i < rowCount; i++) {
+            given().header("Content-Type", "application/json")
+                    .contentType(ContentType.JSON)
+                    .accept(ContentType.JSON)
+                    .when()
+                    .delete(apiUsersPath + "/" + lastUserID)
+                    .then()
+                    .statusCode(200).log().body();
+
+            int incrementedId = Integer.parseInt(lastUserID) - 1;
+            lastUserID = String.valueOf(incrementedId);
+        }
+    }
 
 
 }
