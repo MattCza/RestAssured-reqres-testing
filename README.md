@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# SelfHostedApiTests-reqres-testing
-Automated API testing project using REST Assured to validate Reqres.in endpoints. Covers testing of GET, POST, PUT, DELETE methods, ensuring compliance with expected responses.
-=======
 # 📌 API Testing with Rest Assured  
 
 ## 📑 Table of Contents  
@@ -13,11 +9,14 @@ Automated API testing project using REST Assured to validate Reqres.in endpoints
    - [🟢 Status Code Verification](#-status-code-verification)  
    - [🔍 Fetching User Data](#-fetching-user-data)  
    - [➕ Adding a New User](#-adding-a-new-user)  
-   - [🗑 Deleting a User](#-deleting-a-user)  
-5. [🔍 JSON Schema Validation](#-json-schema-validation) 
-6. [📌 Example Request](#-example-request)  
-7. [🚀 Next Steps](#-next-steps)  
-8. [⚙️ Running the Local API Server](#️-running-the-local-api-server)  
+   - [🗑 Deleting a User](#-deleting-a-user)
+   - [📊 Posting Users from Excel](#-posting-users-from-excel)
+   - [🧹 Cleaning Up Imported Data](#-cleaning-up-imported-data)
+5. [🔍 JSON Schema Validation](#-json-schema-validation)
+6. [⚙️ Test Execution Order with @Priority](#️-test-execution-order-with-priority) 
+7. [📌 Example Request](#-example-request)  
+8. [🚀 Next Steps](#-next-steps)  
+9. [⚙️ Running the Local API Server](#️-running-the-local-api-server)  
 
 ---
 
@@ -34,7 +33,8 @@ The purpose of this module is to test API endpoints using **Rest Assured** to va
 - **JSON Simple** – for request body creation  
 - **Hamcrest Matchers** – for response validation  
 - **JSON Server** – for running a mock API locally
-- **JSON Schema Validator** – for validating API responses  
+- **JSON Schema Validator** – for validating API responses
+- **Apache POI** – for reading and writing Excel files
 
 ---
 
@@ -66,6 +66,15 @@ The purpose of this module is to test API endpoints using **Rest Assured** to va
 ✔️ Confirms that the deletion was successful (**200 OK**).  
 ✔️ Updates `lastUserID` to ensure test consistency.  
 
+### 📊 Posting Users from Excel  
+✔️ Reads user data from an Excel file.  
+✔️ Dynamically generates unique user IDs.  
+✔️ Posts users to the API using data-driven testing.  
+
+### 🧹 Cleaning Up Imported Data  
+✔️ Deletes all users that were **imported from the Excel file** to maintain data consistency.  
+✔️ Ensures that the test environment remains clean after execution.  
+
 ---
 ## 🔍 JSON Schema Validation
 To ensure API responses follow the expected format, JSON Schema validation is implemented using matchesJsonSchemaInClasspath().  
@@ -96,6 +105,46 @@ Content of the user-schema.json file:
 
 ```
 
+---
+
+## ⚙️ Test Execution Order with @Priority
+
+To ensure that every test method executes in the correct order, the @Test(priority = X) annotation is used.
+
+✔️ GET requests run first to check API status and fetch data.
+✔️ POST requests execute after validation steps, ensuring new data is created properly.
+✔️ DELETE requests run last to clean up the test environment.
+Example:  
+
+```
+@Test(priority = 0)
+public void getIsStatusCode200() { 
+    get().then().statusCode(200).log().status();
+}
+
+@Test(priority = 1)
+public void getAllUsers() { 
+    get(apiUsersPath).then().log().body();
+}
+
+@Test(priority = 4)
+public void postAddNewUser() { 
+    // Adds a new user to the database
+}
+
+@Test(priority = 7)
+public void deleteUserImportedFromExcelFile() { 
+    // Deletes users imported from Excel to clean the environment
+}
+```
+
+By structuring tests with priorities, we make sure:  
+✅ API is running before modifying data.  
+✅ POST requests do not run before necessary checks.  
+✅ DELETE methods execute only after data has been inserted.  
+
+
+
 
 ---
 ## 📌 Example Request
@@ -116,6 +165,9 @@ Content of the user-schema.json file:
 ✅ Expand test coverage with more complex assertions.  
 ✅ Implement parameterized tests for dynamic data validation.  
 ✅ Integrate tests with CI/CD pipelines to automate execution.  
+✅ Enhance Excel data reading by supporting multiple sheets & dynamic input.  
+✅ Improve data cleanup mechanisms for better test environment stability.  
+✅ Continue leveraging priority annotations to refine test execution order.    
 🔄 Add PUT requests to update user data and validate responses.  
 🛠 Extend JSON Schema & XML validation for more structured testing.  
 
