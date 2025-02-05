@@ -185,4 +185,3 @@ Start the server with the database file:
     npx json-server db.json
 
 The API will be available at http://localhost:3000
->>>>>>> 4e1b82dda78165ed28bffb6fc0b0526626f5040a
